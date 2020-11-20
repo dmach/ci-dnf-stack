@@ -58,7 +58,7 @@ Scenario: Store a transaction with an invalid transaction ID
  Then the exit code is 1
   And stderr is
       """
-      Error: Transaction ID "2" not found.
+      Error: Not found given transaction ID
       """
 
 

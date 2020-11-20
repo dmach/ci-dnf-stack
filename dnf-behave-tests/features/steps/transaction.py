@@ -117,6 +117,7 @@ def check_dnf_transaction(context, mode):
                 rpm = RPM(nevra)
                 if rpm not in dnf_transaction[action]:
                     candidates = ", ".join([str(i) for i in sorted(dnf_transaction[action])])
+                    print(dnf_transaction)
                     raise AssertionError("[dnf] Package %s not %s; Possible candidates: %s" % (
                                          rpm, action, candidates))
 
